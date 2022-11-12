@@ -8,3 +8,7 @@ final k4SizedBox = SizedBox(
 final k2SizedBox = SizedBox(
   height: 2.h,
 );
+
+final k1SizedBox = SizedBox(
+  height: 1.h,
+);

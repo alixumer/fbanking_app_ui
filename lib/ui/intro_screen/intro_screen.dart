@@ -1,5 +1,7 @@
+import 'package:fbank/animations/custom_route.dart';
 import 'package:fbank/styles/colors.dart';
 import 'package:fbank/styles/const.dart';
+import 'package:fbank/ui/sign_up_screen/sign_up_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:sizer/sizer.dart';
@@ -16,6 +18,7 @@ class _IntroScreenState extends State<IntroScreen>
     with TickerProviderStateMixin {
   AnimationController? _controller;
   final Tween<double> _tween = Tween(begin: 0.75, end: 2);
+
   @override
   void initState() {
     super.initState();
@@ -197,7 +200,12 @@ class _IntroScreenState extends State<IntroScreen>
                       title: 'More',
                       dColor: kTextDarkColor),
                   BottomButton(
-                      onTap: () {},
+                      onTap: () {
+                        //sign up screen route
+                        //create a route with custom route animation
+                        Navigator.of(context)
+                            .push(customRouteAnimation(const SignUpScreen()));
+                      },
                       title: 'Sign Up',
                       dColor: Colors.transparent),
                 ],
